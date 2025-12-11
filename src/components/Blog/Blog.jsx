@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegBookmark } from "react-icons/fa";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmark, handleMark }) => {
   return (
     <div className="group m-2">
       <div className="card bg-base-100 w-96 shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:-translate-y-2 overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -45,9 +45,14 @@ const Blog = ({ blog }) => {
               <p className="font-semibold text-sm">{blog.authorName}</p>
               <p className="text-xs text-gray-500">Author</p>
             </div>
-            <FaRegBookmark size={25}/>
+            <button onClick={() => handleBookmark(blog)}>
+              <FaRegBookmark size={25} />
+            </button>
             <div className="mark-read">
-              <button className="btn btn-primary btn-sm group/btn relative overflow-hidden">
+              <button
+                className="btn btn-primary btn-sm group/btn relative overflow-hidden"
+                onClick={() => handleMark(blog)}
+              >
                 <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">
                   Mark As Read
                 </span>
