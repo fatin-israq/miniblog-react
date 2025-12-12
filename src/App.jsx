@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Blogs from "./components/Blogs/Blogs";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [bookmarked, setBookmarked] = useState([]);
-  const [marked, setMarked] = useState([]);
+  // Mounting Code
+  const [bookmarked, setBookmarked] = useState(() => {
+    const saved = localStorage.getItem("bookmarked");
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [marked, setMarked] = useState(() => {
+    const saved = localStorage.getItem("marked");
+    return saved ? JSON.parse(saved) : [];
+  });
 
+  // Save to Local Storage whenever state changes
+  useEffect(() => {
+    localStorage.setItem("bookmarked", JSON.stringify(bookmarked));
+  }, [bookmarked]);
+
+  useEffect(() => {
+    localStorage.setItem("marked", JSON.stringify(marked));
+  }, [marked]);
+
+  // Handling functions
   function handleBookmark(blog) {
     const newBookMarked = [...bookmarked, blog];
     setBookmarked(newBookMarked);
