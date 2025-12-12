@@ -1,16 +1,56 @@
-# React + Vite
+# Mini Blog React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive blog application built with React as a practice project to explore React fundamentals.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live Site](https://miniblog-2120.netlify.app/)
 
-## React Compiler
+## 📸 Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img src="./public/Screenshot.png" alt="Mini Blog Screenshot">
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** - JavaScript library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework
+- **DaisyUI** - Tailwind CSS component library
+- **HTML** - Markup language
+- **Vite** - Build tool and development server
+
+## ✨ Features
+
+- Browse blog posts with modern card layouts
+- Bookmark favorite articles
+- Mark articles as read
+- Persistent data storage using localStorage
+- Responsive design for all devices
+- Smooth animations and hover effects
+- Fixed navigation bar
+- Modern gradient UI components
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/fatin-israq/miniblog-react.git
+
+# Navigate to project directory
+cd miniblog-react
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+## 📝 Learning Objectives
+
+This project was created to practice:
+
+- React hooks (useState, useEffect)
+- Component-based architecture
+- Props and state management
+- localStorage integration
+- Tailwind CSS styling
